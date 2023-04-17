@@ -1,8 +1,13 @@
+import axios from 'axios';
 //HOOKS
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 //ACTIONS REDUX
-import { getUsers, getAposts, getService } from "./Redux/Actions";
+import { getUsers, getAposts, getService, deleteUser} from "./Redux/Actions";
+//CSS
+import  "./Assets/CSS/Dashboard.css"
+//Components
+import Navbar from "./Components/Navbar/Navbar.jsx"
 
 const Dashboard=()=> {
 
@@ -24,14 +29,21 @@ const Dashboard=()=> {
     e.preventDefault()
     setInfServer(selector)
   }
-  
+
+  const deleteUser =(id)=>{
+     axios.delete(`https://promanitasapi.onrender.com/api/v1/users/${id}`)
+     .then(()=>console.log("Usuario eliminado con éxito"))
+  }
+
   return (
     <div>
-      <button onClick={ e => setStates(e, allUsers)} >USUARIOS</button>
-      <button onClick={ e => setStates(e, allAdposts)} >ADPOSTS</button>
-      <button onClick={ e => setStates(e, allService)} >SERVICES</button>
+      <Navbar/>
+      <button className="dashboard-btn" onClick={ e => setStates(e, allUsers)} >USUARIOS</button>
+      <button className="dashboard-btn" onClick={ e => setStates(e, allAdposts)} >ADPOSTS</button>
+      <button className="dashboard-btn" onClick={ e => setStates(e, allService)} >SERVICES</button>
+
     {infServer.map(item  =>  item.name ? (
-            <table key={item.id}>
+            <table className="dashboard-table" key={item.id}>
             <thead>
               <tr>
                 <th>ID</th>
@@ -44,6 +56,7 @@ const Dashboard=()=> {
               <td>{item.id}</td>
               <td>{item.name}</td>
               <td>{item.description || item.image}</td>
+              <td><button>Eliminar</button></td>
             </tr>
             </tbody>
             </table>
@@ -60,6 +73,7 @@ const Dashboard=()=> {
                 <th>Celular</th>
                 <th>Dirección</th>
                 <th>Contraseña</th>
+                <th>Eliminado</th>
               </tr>
             </thead>
             <tbody>
@@ -73,6 +87,7 @@ const Dashboard=()=> {
               <td>{item.address}</td>
               <td>{item.password}</td>
               <td>{item.deleted}</td>
+              <td><button onClick={()=>deleteUser(item.id)}>Eliminar</button></td>
               </tr>
             </tbody>
             </table>)
