@@ -1,60 +1,44 @@
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  th, td {
-    text-align: left;
-    padding: 8px;
-  }
-  
-  th {
-    background-color: #f2f2f2;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  tr:hover {
-    background-color: #ddd;
-  }
-  
-  .dashboard-btn {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
+.dashboard-btn {
+  background-color: #0077b6;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
 
-  .dashboard-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  .dashboard-table th, .dashboard-table td {
-    text-align: left;
-    padding: 8px;
-  }
-  
-  .dashboard-table th {
-    background-color: #f2f2f2;
-  }
-  
-  .dashboard-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  .dashboard-table tr:hover {
-    background-color: #ddd;
-  }
-  
-  
+.dashboard-btn:hover {
+  background-color: #023e8a;
+}
+
+.dashboard-table {
+  border-collapse: collapse;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.dashboard-table th {
+  background-color: #0077b6;
+  color: #fff;
+}
+
+.dashboard-table td button {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.dashboard-table td button:hover {
+  background-color: #c82333;
+}
