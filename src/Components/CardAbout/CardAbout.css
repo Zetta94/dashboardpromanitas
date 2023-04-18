@@ -1,0 +1,44 @@
+.card-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-about__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .card-about__name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-about__description {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .card-about__linkedin,
+  .card-about__github {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #0077b5;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .card-about__linkedin:hover,
+  .card-about__github:hover {
+    background-color: #005f91;
+  }
+  
