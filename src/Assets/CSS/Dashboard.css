@@ -22,7 +22,8 @@
 .dashboard-table td {
   padding: 0.5rem;
   border: 1px solid #ddd;
-  text-align: left;
+  text-align: center;
+  margin: auto 0;
 }
 
 .dashboard-table th {

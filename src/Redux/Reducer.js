@@ -2,7 +2,11 @@ const initialState = {
     users : [],
     allUsers: [],
     adposts : [],
-    services: []
+    services: [],
+    contracts: [],
+    deletedUsers: [],
+    deletedAdposts: [],
+    deletedContracts: []
 };
 
 function rootReducer(state = initialState, action){
@@ -32,6 +36,30 @@ function rootReducer(state = initialState, action){
                 ...state,
                 services: action.payload
             };
+
+        case 'GET_DELETED_USERS':
+            return{
+                ...state,
+                deletedUsers: action.payload
+            }
+
+        case 'GET_DELETED_ADPOSTS':
+            return {
+                ...state,
+                deletedAdpost: action.payload
+            }
+
+        case 'GET_CONTRACT':
+            return {
+                ...state,
+                contracts: action.payload
+            }
+
+        case 'GET_DELETED_CONTRACT':
+            return {
+                ...state,
+                deletedContracts: action.payload
+            }
 
         case 'ORDER_ASC':
             const orderUsers = state.allUsers.sort((a,b)=>a.name.localeCompare(b.name))
