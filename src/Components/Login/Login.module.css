@@ -1,0 +1,27 @@
+.loginDiv {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.loginDiv div {
+  background: linear-gradient(to bottom, #8585855e, #ffffff0a);
+  height: max-content;
+  box-shadow: 0 0 10px black;
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.loginDiv div form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}

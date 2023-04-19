@@ -1,0 +1,12 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card2 {
+    flex-basis: 22%;
+    flex-grow: 1;
+    margin: 1%;
+  }
+  

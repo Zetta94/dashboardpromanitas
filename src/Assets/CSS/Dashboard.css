@@ -32,7 +32,7 @@
 }
 
 .dashboard-table td button {
-  background-color: #dc3545;
+  background-color: #ffffff;
   color: #fff;
   padding: 0.25rem 0.5rem;
   border: none;
@@ -41,5 +41,48 @@
 }
 
 .dashboard-table td button:hover {
-  background-color: #c82333;
+  background-color: #fdfdfd;
+}
+
+
+.h1box {
+  position: relative;
+  background-color: rgb(72, 143, 223);
+  border-radius: 5px;
+  box-shadow: rgb(72, 130, 239) 0px 4px 0px 0px;
+  padding: 15px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  width: 250px;
+  height: 50px;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  transition: all .3s ease-in-out;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.h1box::before {
+  content: "";
+  background-color: rgb(50, 110, 248);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: width 700ms ease-in-out;
+  display:flex;
+}
+
+.h1box:hover::before {
+  width: 100%;
+}
+
+.divbox{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
 }
