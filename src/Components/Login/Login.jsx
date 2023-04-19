@@ -27,7 +27,7 @@ const Login=()=> {
     axios.post('http://localhost:3001/api/v1/login', form)
       .then(data => localStorage.setItem('token', data.data.token));
 
-    if(form.admin === 'Manuel Zuñiga' && form.password === 'admin' || form.admin === 'Mariana Flores' && form.password === 'admin' || form.admin === 'Kevin Alfonzo' && form.password === 'admin' || form.admin === 'Julian Riera' && form.password === 'admin' || form.admin === 'Gabriela Acevedo' && form.password === 'admin' || form.admin === 'Yanina Zurcher' && form.password === 'admin' || form.admin === 'Lucio' && form.password === 'admin' || form.admin === 'Maria Lobeto' && form.password === 'admin'){
+    if((form.admin === 'Manuel Zuñiga' && form.password === 'admin') ||( form.admin === 'Mariana Flores' && form.password === 'admin') || (form.admin === 'Kevin Alfonzo' && form.password === 'admin') || (form.admin === 'Julian Riera' && form.password === 'admin') || (form.admin === 'Gabriela Acevedo' && form.password === 'admin') || (form.admin === 'Yanina Zurcher' && form.password === 'admin') || (form.admin === 'Lucio' && form.password === 'admin') || (form.admin === 'Maria Lobeto' && form.password === 'admin')){
       navigate('/board');
     }else{
       alert('Error de autenticación');
