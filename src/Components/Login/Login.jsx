@@ -18,9 +18,8 @@ const Login=()=> {
     setForm({
       ...form,
       [e.target.name] : e.target.value
-    })
-    console.log(form)
-  }
+    });
+  };
 
   const handlerSubmit = (e) => {
     e.preventDefault();
@@ -32,21 +31,7 @@ const Login=()=> {
     }else{
       alert('Error de autenticación');
     };
-  };
-
-//   // Save token to local storage
-// ;
-
-// // Retrieve token from local storage
-// const token = localStorage.getItem('token');
-
-// // Remove token from local storage
-// localStorage.removeItem('token');
-
-
-
-
-        
+  };;
 
   return (
 
@@ -70,6 +55,6 @@ const Login=()=> {
     </div>
   </div>
   );
-}
+};
 
 export default Login;
