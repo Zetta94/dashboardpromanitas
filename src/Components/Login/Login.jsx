@@ -6,8 +6,8 @@ const Login=()=> {
 
   //FORM STATE
   const [form, setForm] = useState({
-    username: '',
-    password: ''
+    email: "",
+    password: ""
   });
 
   //ON CHANGES FN
@@ -21,9 +21,21 @@ const Login=()=> {
 
   const handlerSubmit = (e) => {
     e.preventDefault();
+    const dataToken = ''
     axios.post('http://localhost:3001/api/v1/login', form)
-      .then(data => console.log(data))
+      .then(data => localStorage.setItem('token', data.data.token))
   }
+
+//   // Save token to local storage
+// ;
+
+// // Retrieve token from local storage
+// const token = localStorage.getItem('token');
+
+// // Remove token from local storage
+// localStorage.removeItem('token');
+
+
 
 
         
@@ -36,8 +48,8 @@ const Login=()=> {
 
       <form onSubmit={e => handlerSubmit(e)}>
 
-        <label htmlFor='username'>Username
-          <input name='username' type="text" id="username" value={form.username} onChange={e => handlerForm(e)} />
+        <label htmlFor='email'>email
+          <input name='email' type="text" id="email" value={form.email} onChange={e => handlerForm(e)} />
         </label>
 
         <label htmlFor='password'>Password
