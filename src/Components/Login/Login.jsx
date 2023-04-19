@@ -24,11 +24,10 @@ const Login=()=> {
 
   const handlerSubmit = (e) => {
     e.preventDefault();
-    const dataToken = ''
     axios.post('http://localhost:3001/api/v1/login', form)
       .then(data => localStorage.setItem('token', data.data.token));
 
-    if(form.email == 'Probando' && form.password == 'Probando'){
+    if(form.email === 'Probando' && form.password === 'Probando'){
       navigate('/board');
     }else{
       alert('Error de autenticación');
