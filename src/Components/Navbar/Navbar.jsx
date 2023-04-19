@@ -12,7 +12,7 @@ const Navbar=()=> {
                 <img src={img} alt="Logo" />
                 <ul>
                     <li>
-                        <Link to="/">INICIO</Link>
+                        <Link to="/board">INICIO</Link>
                     </li>
                     <li>
                         <Link to="/deleted">ELIMINADOS</Link>
