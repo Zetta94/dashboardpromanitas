@@ -68,6 +68,7 @@ const Eliminados=()=> {
                 <th>Fecha de inicio</th>
                 <th>Fecha de cierre</th>
                 <th>Precio</th>
+                <th>Detalles</th>
               </>
             )}
           </tr>
@@ -78,10 +79,7 @@ const Eliminados=()=> {
               <tr key={item.id}>
                 <td>{item.id}</td>
                 <td>{item.name}</td>
-                <td>{item.description || item.image}</td>
-                <td>
-                  <button onClick={() => console.log("Volviendo")}>✅</button>
-                </td>
+                <td>{item.description}</td>
               </tr>
             ) : item.username ? (
               <tr key={item.id}>
@@ -93,21 +91,14 @@ const Eliminados=()=> {
                 <td>{item.cellnumber}</td>
                 <td>{item.address}</td>
                 <td>{item.password}</td>
-                <td>{item.deleted}</td>
-                <td>
-                  <button onClick={() => console.log("Volviendo")}>✅</button>
-                </td>
               </tr>
             ) : (
               <tr key={item.id}>
                 <td>{item.id}</td>
                 <td>{item.commencementDate.slice(0, 10)}</td>
                 <td>{item.terminationDate.slice(0, 10)}</td>
-                <td>{item.payment}</td>
-                <td></td>
-                <td>
-                  <button onClick={() => console.log("Volviendo")}>✅</button>
-                </td>
+                <td>{item.payment} USD</td>
+                <td>{item.detail}</td>
               </tr>
             )
           )}
