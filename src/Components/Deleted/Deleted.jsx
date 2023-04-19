@@ -11,7 +11,7 @@ import  '../../Assets/CSS/Dashboard.css';
 //Components
 import Navbar from '../Navbar/Navbar';
 
-const Eliminados=()=> {
+const Deleted =()=> {
 
   const dispatch = useDispatch();
 
@@ -120,4 +120,4 @@ const Eliminados=()=> {
   );
 }
 
-export default Eliminados;
+export default Deleted;

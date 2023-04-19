@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import style from './Login.module.css';
 import axios from 'axios';
 
 const Login=()=> {
+
+  const navigate = useNavigate();
 
   //FORM STATE
   const [form, setForm] = useState({
@@ -23,8 +26,14 @@ const Login=()=> {
     e.preventDefault();
     const dataToken = ''
     axios.post('http://localhost:3001/api/v1/login', form)
-      .then(data => localStorage.setItem('token', data.data.token))
-  }
+      .then(data => localStorage.setItem('token', data.data.token));
+
+    if(form.email == 'Probando' && form.password == 'Probando'){
+      navigate('/board');
+    }else{
+      alert('Error de autenticación');
+    };
+  };
 
 //   // Save token to local storage
 // ;
