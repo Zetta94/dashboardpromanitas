@@ -9,7 +9,7 @@ const Login=()=> {
 
   //FORM STATE
   const [form, setForm] = useState({
-    email: "",
+    admin: "",
     password: ""
   });
 
@@ -27,7 +27,7 @@ const Login=()=> {
     axios.post('http://localhost:3001/api/v1/login', form)
       .then(data => localStorage.setItem('token', data.data.token));
 
-    if(form.email === 'Probando' && form.password === 'Probando'){
+    if(form.admin === 'Manuel Zuñiga' && form.password === 'admin' || form.admin === 'Mariana Flores' && form.password === 'admin' || form.admin === 'Kevin Alfonzo' && form.password === 'admin' || form.admin === 'Julian Riera' && form.password === 'admin' || form.admin === 'Gabriela Acevedo' && form.password === 'admin' || form.admin === 'Yanina Zurcher' && form.password === 'admin' || form.admin === 'Lucio' && form.password === 'admin' || form.admin === 'Maria Lobeto' && form.password === 'admin'){
       navigate('/board');
     }else{
       alert('Error de autenticación');
@@ -56,11 +56,11 @@ const Login=()=> {
 
       <form onSubmit={e => handlerSubmit(e)}>
 
-        <label htmlFor='email'>email
-          <input name='email' type="text" id="email" value={form.email} onChange={e => handlerForm(e)} />
+        <label htmlFor='admin'>Administrador
+          <input name='admin' type="text" id="admin" value={form.admin} onChange={e => handlerForm(e)} />
         </label>
 
-        <label htmlFor='password'>Password
+        <label htmlFor='password'>Pass
           <input name='password' type="password" id="password" value={form.password} onChange={e => handlerForm(e)} />
         </label>
 
