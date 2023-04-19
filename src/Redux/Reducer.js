@@ -43,10 +43,10 @@ function rootReducer(state = initialState, action){
                 deletedUsers: action.payload
             }
 
-        case 'GET_DELETED_ADPOSTS':
+        case 'GET_DELETED_ADPOST':
             return {
                 ...state,
-                deletedAdpost: action.payload
+                deletedAdposts: action.payload
             }
 
         case 'GET_CONTRACT':

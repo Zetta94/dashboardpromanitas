@@ -12,17 +12,14 @@ const Navbar=()=> {
                 <img src={img} alt="Logo" />
                 <ul>
                     <li>
-                        <Link to="/">Inicio</Link>
+                        <Link to="/">INICIO</Link>
                     </li>
                     <li>
-                        <Link to="/about">About</Link>
+                        <Link to="/Eliminados">ELIMINADOS</Link>
                     </li>
                     <li>
-                        <Link to="/login">Login</Link>
-                    </li>
-                    <li>
-                        <Link to="/Eliminados">Eliminados</Link>
-                    </li>
+                        <Link to="/about">NOSOTROS</Link>
+                    </li>                   
                 </ul>
             </nav>
         </div>

@@ -46,7 +46,7 @@ export const getAposts = () => async (dispatch) => {
 
 export const getDeletedAdpost = () => async (dispatch) =>{
     dispatch({
-        type: 'GET_DELETED_APOST',
+        type: 'GET_DELETED_ADPOST',
         payload: []
     });
 
