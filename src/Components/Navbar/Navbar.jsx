@@ -15,7 +15,7 @@ const Navbar=()=> {
                         <Link to="/">INICIO</Link>
                     </li>
                     <li>
-                        <Link to="/Eliminados">ELIMINADOS</Link>
+                        <Link to="/deleted">ELIMINADOS</Link>
                     </li>
                     <li>
                         <Link to="/about">NOSOTROS</Link>
