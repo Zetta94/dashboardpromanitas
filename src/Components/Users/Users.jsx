@@ -9,6 +9,7 @@ const Users = () => {
     //DISPATCH
     const dispatch = useDispatch();
 
+
     //REDUCER REDUX
     useEffect(() => {
       dispatch(getUsers());
@@ -32,6 +33,15 @@ const Users = () => {
             });
       };
 
+      const confirmDelete = (id,selector) => {
+        const confirmMessage = "¿Realmente deseas eliminar?";
+        const confirmed = window.confirm(confirmMessage);
+        if (confirmed && selector === 'user') {
+          deleteUser(id);
+        }
+      };
+
+      
     return(
         <div>
             <table className="dashboard-table">
@@ -46,6 +56,7 @@ const Users = () => {
                         <th>Dirección</th>
                         <th>Contraseña</th>
                         <th>Eliminar</th>
+                        <th>Editar</th>                    
                     </tr>
                 </thead>
                 <tbody>

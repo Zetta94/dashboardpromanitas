@@ -19,6 +19,7 @@ const Adpost = () => {
     const allAdposts = useSelector(state => state.adposts);
     const allDeletedAdposts = useSelector(state=> state.deletedAdposts);
 
+    
     //DELETE ADPOST
     const deleteAdpost = async (id)=>{
         axios.delete(`https://promanitasapi.onrender.com/api/v1/adposts/${id}`)
@@ -31,7 +32,15 @@ const Adpost = () => {
                 console.log(error);
             });
       };
-
+      
+    const confirmDelete = (id,selector) => {
+          const confirmMessage = "¿Realmente deseas eliminar?";
+          const confirmed = window.confirm(confirmMessage);
+          if (confirmed && selector === 'adpost') {
+            deleteAdpost(id);
+          }
+        };
+        
       return (
         <div>
             <table className="dashboard-table">

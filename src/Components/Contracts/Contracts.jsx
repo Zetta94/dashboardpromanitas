@@ -18,7 +18,7 @@ const Contracts = () => {
 
     //REDUX STATES
     const allContracts = useSelector(state => state.contracts);
-    const allDeletedContracts = useSelector(state=> state.deletedContracts);
+    // const allDeletedContracts = useSelector(state=> state.deletedContracts);
 
     //DELETE CONTRACT
     const deleteContract = async (id)=>{
@@ -32,6 +32,16 @@ const Contracts = () => {
                 console.log(error);
             });
     };
+
+
+
+    // const confirmDelete = (id,selector) => {
+    //     const confirmMessage = "¿Realmente deseas eliminar?";
+    //     const confirmed = window.confirm(confirmMessage);
+    //     if (confirmed && selector === 'contract') {
+    //       deleteContract(id);
+    //     }
+    //   };    
     
     return (
         <div>
@@ -56,7 +66,7 @@ const Contracts = () => {
                                 <td>{item.payment} USD</td>
                                 <td>{item.detail}</td>
                                 <td>
-                                <button onClick={() => confirmDelete(item.id,'contract')}>❎</button>
+                                {/* <button onClick={() => confirmDelete(item.id,'contract')}>❎</button> */}
                                 </td>
                             </tr>
                         ))
