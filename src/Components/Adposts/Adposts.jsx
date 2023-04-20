@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 //ACTIONS REDUX
 import { getAposts, getDeletedAdpost} from "../../Redux/Actions";
+import Navbar from '../Navbar/Navbar';
 
 const Adpost = () => {
     //DISPATCH
@@ -38,11 +39,12 @@ const Adpost = () => {
           const confirmed = window.confirm(confirmMessage);
           if (confirmed && selector === 'adpost') {
             deleteAdpost(id);
-          }
+          };
         };
         
       return (
         <div>
+            <Navbar/>
             <table className="dashboard-table">
                 <thead>
                     <tr>

@@ -9,11 +9,11 @@ import Store from './Redux/Store';
 import Dashboard from './Dashboard';
 import About from './Components/About/About';
 import Login from './Components/Login/Login';
-import Deleted from './Components/Deleted/Deleted';
 import Users from './Components/Users/Users';
 import Adposts from './Components/Adposts/Adposts';
 import Contracts from './Components/Contracts/Contracts'
 import Services from './Components/Services/Services'
+import FormUsers from './Components/Form/FormUsers';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,11 +24,11 @@ root.render(
         <Route path="/" element={<Login/>} />
         <Route path="/about" element={<About/>}/>
         <Route path="/board" element={<Dashboard/>}/>
-        <Route path="/deleted" element={<Deleted/>}/>
         <Route path= '/users' element ={<Users/>}/>
         <Route path= '/adposts' element ={<Adposts/>}/>
         <Route path= '/contracts' element ={<Contracts/>}/>
         <Route path= '/services' element ={<Services/>}/>
+        <Route path= '/formusers/:id' element={<FormUsers/>} />
       </Routes>
     </BrowserRouter>
   </Provider>

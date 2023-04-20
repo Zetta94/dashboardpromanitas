@@ -15,11 +15,20 @@ const Navbar=()=> {
                         <Link to="/board">INICIO</Link>
                     </li>
                     <li>
-                        <Link to="/deleted">ELIMINADOS</Link>
+                        <Link to='/users'>USUARIOS</Link>
                     </li>
                     <li>
+                        <Link to='/adposts' >POSTEOS</Link>
+                    </li>
+                    <li>
+                        <Link to='/contracts'>CONTRATOS</Link>
+                    </li>
+                    <li>
+                        <Link to='/services'>SERVICIOS</Link>
+                    </li>      
+                    <li>
                         <Link to="/about">NOSOTROS</Link>
-                    </li>                   
+                    </li>             
                 </ul>
             </nav>
         </div>

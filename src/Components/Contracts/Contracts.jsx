@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 //ACTIONS REDUX
 import { getContract, getDeletedContract} from "../../Redux/Actions";
+import Navbar from "../Navbar/Navbar";
+
 
 const Contracts = () => {
 
@@ -45,6 +47,7 @@ const Contracts = () => {
     
     return (
         <div>
+            <Navbar/>
             <table className="dashboard-table">
                 <thead>
                     <tr>

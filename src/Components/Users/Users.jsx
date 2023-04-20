@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 //ACTIONS REDUX
 import { getUsers, getDeletedUsers } from "../../Redux/Actions";
+import Navbar from '../Navbar/Navbar';
+import { Link } from 'react-router-dom';
 
 const Users = () => {
     //DISPATCH
@@ -44,6 +46,7 @@ const Users = () => {
       
     return(
         <div>
+            <Navbar/>
             <table className="dashboard-table">
                 <thead>
                     <tr>
@@ -74,6 +77,7 @@ const Users = () => {
                                 <td>
                                     <button onClick={() => confirmDelete(item.id,'user')}>❎</button>
                                 </td>
+                                <Link to={`/formusers/${item.id}`}>Editar</Link>
                             </tr>
                         ))
                     }

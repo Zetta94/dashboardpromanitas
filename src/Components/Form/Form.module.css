@@ -1,0 +1,14 @@
+.formUsers {
+    background: #8eb1f2;
+    padding: 0;
+    margin: 0;
+    height: 88vh;
+}
+
+.formUsers form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}

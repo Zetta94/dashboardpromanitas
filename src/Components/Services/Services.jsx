@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 //ACTIONS REDUX
 import { getService } from "../../Redux/Actions";
+import Navbar from '../Navbar/Navbar';
 
 const Services = () => {
 
@@ -20,6 +21,7 @@ const Services = () => {
 
     return(
         <div>
+            <Navbar/>
             <table className="dashboard-table">
                 <thead>
                     <tr>
