@@ -181,8 +181,8 @@ const Dashboard=()=> {
             ) : (
               <tr key={item.id}>
                 <td>{item.id}</td>
-                <td>{item.commencementDate.slice(0, 10)}</td>
-                <td>{item.terminationDate.slice(0, 10)}</td>
+                <td>{item.commencementDate}</td>
+                <td>{item.terminationDate}</td>
                 <td>{item.payment} USD</td>
                 <td>{item.detail}</td>
                 <td>
