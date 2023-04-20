@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useParams } from 'react-router-dom';
 import axios from "axios";
-import Styles from './Form.module.css'
-
+import Styles from './Form.module.css';
+import { Link } from 'react-router-dom';
 
 
 const FormUsers = (props) => {
@@ -62,6 +62,7 @@ const FormUsers = (props) => {
                 <label htmlFor="cellnumber">Número Telefónico:</label>               
                 <input type='text' name='cellnumber' value={form.cellnumber} onChange={(e)=> handlerForm(e)}></input>          
                 <button type="submit" onClick={e => handlerSubmit(e)} >Actualizar</button>
+                <Link to='/users'><button>Volver</button></Link>
             </form>
         </div>
     );

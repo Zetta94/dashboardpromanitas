@@ -45,13 +45,14 @@ const Adpost = () => {
       return (
         <div>
             <Navbar/>
+            <h1>POSTEOS</h1>
             <table className="dashboard-table">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>Titulo</th>
                         <th>Descripcion</th>
-                        <th></th>
+                        <th>Editar</th>
                     </tr>
                 </thead>
                 <tbody>

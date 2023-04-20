@@ -47,6 +47,7 @@ const Users = () => {
     return(
         <div>
             <Navbar/>
+            <h1>USUARIOS</h1>
             <table className="dashboard-table">
                 <thead>
                     <tr>
@@ -77,7 +78,9 @@ const Users = () => {
                                 <td>
                                     <button onClick={() => confirmDelete(item.id,'user')}>❎</button>
                                 </td>
-                                <Link to={`/formusers/${item.id}`}>Editar</Link>
+                                <td>
+                                    <Link to={`/formusers/${item.id}`}>Editar</Link>
+                                </td>
                             </tr>
                         ))
                     }

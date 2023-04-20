@@ -1,3 +1,9 @@
+* {
+  background-color: #0076b649;
+  padding: 0;
+  margin: 0;
+}
+
 .dashboard-btn {
   background-color: #0077b6;
   color: #fff;

@@ -48,6 +48,7 @@ const Contracts = () => {
     return (
         <div>
             <Navbar/>
+            <h1>CONTRATOS</h1>
             <table className="dashboard-table">
                 <thead>
                     <tr>
@@ -56,7 +57,6 @@ const Contracts = () => {
                         <th>Fecha de cierre</th>
                         <th>Precio</th>
                         <th>Detalles</th>
-                        <th>Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -68,9 +68,6 @@ const Contracts = () => {
                                 <td>{item.terminationDate}</td>
                                 <td>{item.payment} USD</td>
                                 <td>{item.detail}</td>
-                                <td>
-                                {/* <button onClick={() => confirmDelete(item.id,'contract')}>❎</button> */}
-                                </td>
                             </tr>
                         ))
                     }

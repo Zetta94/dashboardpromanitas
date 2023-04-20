@@ -22,6 +22,7 @@ const Services = () => {
     return(
         <div>
             <Navbar/>
+            <h1>SERVICIOS</h1>
             <table className="dashboard-table">
                 <thead>
                     <tr>
